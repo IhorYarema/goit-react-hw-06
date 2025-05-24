@@ -1,24 +1,16 @@
-import React from 'react';
-import Profile from './components/Profile/Profile';
-import FriendList from './components/FriendList/FriendList';
-import TransactionHistory from './components/TransactionHistory/TransactionHistory';
-
-import userData from './userData.json';
-import friends from './friends.json';
-import transactions from './transactions.json';
+import ContactForm from './components/ContactForm/ContactForm';
+import SearchBox from './components/SearchBox/SearchBox';
+import ContactList from './components/ContactList/ContactList';
 
 const App = () => {
   return (
     <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <div>
+        <h1>Phonebook</h1>
+        <ContactForm />
+        <SearchBox />
+        <ContactList />
+      </div>
     </>
   );
 };
